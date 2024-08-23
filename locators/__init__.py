@@ -1,1 +1,3 @@
-from locators.home_page_locator import HomePageOlxLocators
+from locators.header_locators import HeaderLocators
+from locators.favourite_locators import FavouriteLocators
+from locators.logo_locators import LogoLocators
