@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from locators.logo_locators import LogoLocators
+import allure
 
 
 class LogoPage(BasePage, LogoLocators):
@@ -8,6 +9,7 @@ class LogoPage(BasePage, LogoLocators):
         super().__init__(driver)
         self.driver = driver
 
+    @allure.step("Logo page is opened")
     def assert_that_logo_page_is_opened(self):
         assert self.get_element(self.FACEBOOK)
         assert self.get_element(self.APPLE)
