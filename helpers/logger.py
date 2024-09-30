@@ -14,4 +14,3 @@ def create_logger():
 
     return logger
 
-
