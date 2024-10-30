@@ -1,3 +1,4 @@
 from locators.header_locators import HeaderLocators
 from locators.favourite_locators import FavouriteLocators
-from locators.logo_locators import LogoLocators
+from locators.login_locators import LogoLocators
+from locators.main_locators import MainLocators

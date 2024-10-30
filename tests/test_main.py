@@ -3,7 +3,7 @@ import allure
 from pages.main_page import MainPage
 from elements.header_element import HeaderElement
 from pages.favourite_page import FavouritePage
-from pages.logo_page import LogoPage
+from pages.login_page import LogoPage
 
 
 @allure.feature("Main page")

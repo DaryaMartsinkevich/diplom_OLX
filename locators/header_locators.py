@@ -7,3 +7,4 @@ class HeaderLocators:
     FAVOURITE = (By.CSS_SELECTOR, '[class="css-bkyudi"]')
     ACCOUNT = (By.CSS_SELECTOR, '[class="css-12l1k7f"]')
     ANNOUCEMENT = (By.CSS_SELECTOR, '[class="css-w1ofum"]')
+    ANSWERS = (By.CSS_SELECTOR, '[class="css-1q6sukh"]')

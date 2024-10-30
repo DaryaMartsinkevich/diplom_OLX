@@ -1,3 +1,8 @@
+from selenium.webdriver.support import expected_conditions as EC
+
+from selenium.webdriver.support.wait import WebDriverWait
+
+
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
@@ -16,6 +21,9 @@ class BasePage:
         element = self.driver.find_element(*selector)
         element.send_keys(text)
 
+    def fill(self, selector, text):
+        self.get_element(selector).send_keys(text)
+
     def save_screenshot(self, name):
         self.driver.save_screenshot(name)
 
@@ -26,5 +34,12 @@ class BasePage:
     def delete_cookies(self, name, value):
         cookie = {'name': name, 'value': value}
         self.driver.remove_cookie(cookie)
+
+    def accept_cookies(self, selector):
+        accept_button = WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(*selector)
+        )
+        accept_button.click()
+
 
 
